@@ -1,0 +1,28 @@
+Config { font = "xft:Terminus"
+       , additionalFonts = []
+       , borderColor = "#002b36"
+       , border = TopB
+       , bgColor = "#002b36"
+       , fgColor = "#839496"
+       , alpha = 255
+       , position = Top
+       , textOffset = -1
+       , iconOffset = -1
+       , lowerOnStart = True
+       , pickBroadest = False
+       , persistent = False
+       , hideOnStart = False
+       , iconRoot = "."
+       , allDesktops = True
+       , overrideRedirect = True
+       , commands = [ Run XMonadLog
+                    , Run Date "%a %F %R" "date" 60
+                    , Run Kbd [("us", "us"), ("se", "se")]
+                    , Run Mail [ ("@work: ", "~/.mail/work/INBOX") 
+                               , ("@proton: ", "~/.mail/protonmail/INBOX")
+                               ] "mail"
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       , template = " %XMonadLog% }{ %mail%   %date% . %kbd% "
+       }
