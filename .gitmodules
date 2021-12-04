@@ -1,0 +1,27 @@
+[submodule ".config/mutt/mutt-colors-solarized"]
+	path = .config/mutt/mutt-colors-solarized
+	url = https://github.com/altercation/mutt-colors-solarized.git
+[submodule ".config/xmonad/xmonad"]
+	path = .config/xmonad/xmonad
+	url = https://github.com/xmonad/xmonad.git
+[submodule ".config/xmonad/xmonad-contrib"]
+	path = .config/xmonad/xmonad-contrib
+	url = https://github.com/xmonad/xmonad-contrib.git
+[submodule ".config/nvim/pack/plugins/opt/nvim-lspconfig"]
+	path = .config/nvim/pack/plugins/opt/nvim-lspconfig
+	url = https://github.com/neovim/nvim-lspconfig.git
+[submodule ".config/nvim/pack/plugins/opt/nvim-treesitter"]
+	path = .config/nvim/pack/plugins/opt/nvim-treesitter
+	url = https://github.com/nvim-treesitter/nvim-treesitter.git
+[submodule ".config/nvim/pack/plugins/opt/playground"]
+	path = .config/nvim/pack/plugins/opt/playground
+	url = https://github.com/nvim-treesitter/playground.git
+[submodule ".config/nvim/pack/plugins/opt/vim-colors-solarized"]
+	path = .config/nvim/pack/plugins/opt/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule ".config/nvim/pack/plugins/opt/vimtex"]
+	path = .config/nvim/pack/plugins/opt/vimtex
+	url = https://github.com/lervag/vimtex
+[submodule ".config/Xresources/xresources"]
+	path = .config/Xresources/xresources
+	url = https://github.com/solarized/xresources.git
