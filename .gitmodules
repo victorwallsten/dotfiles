@@ -21,7 +21,7 @@
 	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule ".config/nvim/pack/plugins/opt/vimtex"]
 	path = .config/nvim/pack/plugins/opt/vimtex
-	url = https://github.com/lervag/vimtex
+	url = https://github.com/lervag/vimtex.git
 [submodule ".config/Xresources/xresources"]
 	path = .config/Xresources/xresources
 	url = https://github.com/solarized/xresources.git
