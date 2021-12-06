@@ -7,5 +7,7 @@ xrandr -s 1920x1080 -r 144 &
 xset s off &
 # Disable DPMS (Energy Star) features.
 xset -dpms &
+# Hide mouse cursor when inactive.
+unclutter-xfixes --timeout 1 &
 # Run window manager.
 exec xmonad
