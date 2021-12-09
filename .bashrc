@@ -11,7 +11,6 @@ export XDG_CONFIG_HOME=$HOME/.config
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_STATE_HOME=$HOME/.local/state
 export DOTREMINDERS=$XDG_CONFIG_HOME/reminders
-export GHCUP_USE_XDG_DIRS=1
 export GNUPGHOME=$XDG_CONFIG_HOME/gnupg
 export LYNX_CFG=$XDG_CONFIG_HOME/lynx/lynx.cfg
 export LYNX_LSS=$XDG_CONFIG_HOME/lynx/lynx.lss
@@ -33,8 +32,8 @@ if [ -f "$HOME/.cargo/env" ]; then
 fi
 
 # GHCup.
-if [ -f "$HOME/.local/share/ghcup/env" ]; then
-  . "$HOME/.local/share/ghcup/env"
+if [ -f "$HOME/.ghcup/env" ]; then
+  . "$HOME/.ghcup/env"
 fi
 
 # Aliases for bare repos.
