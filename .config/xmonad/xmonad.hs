@@ -1,6 +1,6 @@
 {-# OPTIONS_GHC -Wno-missing-signatures #-}
 
-import XMonad (xmonad)
+import XMonad.Main (xmonad)
 import XMonad.Config.Prime (def, mod4Mask, sendMessage, spawn)
 import XMonad.Core
   ( borderWidth,
@@ -34,7 +34,6 @@ import XMonad.Layout
   )
 import XMonad.Layout.NoBorders (noBorders)
 import XMonad.Layout.Renamed (Rename (Replace), renamed)
-import XMonad.Layout.ThreeColumns (ThreeCol (ThreeColMid))
 import XMonad.ManageHook
   ( className,
     composeAll,
@@ -71,13 +70,10 @@ myConfig =
     }
     `additionalKeysP` myKeys
 
-myLayoutHook = avoidStruts (tall ||| Mirror tall ||| threeColMid) ||| full
+myLayoutHook = avoidStruts (tall ||| Mirror tall) ||| full
   where
-    tall = Tall 1 delta master
-    threeColMid = ThreeColMid 1 delta master
+    tall = Tall 1 (1 / 100) (1 / 2)
     full = renamed [Replace "full"] $ noBorders Full -- renamed for JumpToLayout
-    delta = 1 / 100
-    master = 1 / 2
 
 myManageHook =
   composeAll
