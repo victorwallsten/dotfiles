@@ -1,6 +1,5 @@
 {-# OPTIONS_GHC -Wno-missing-signatures #-}
 
-import XMonad.Main (xmonad)
 import XMonad.Config.Prime (def, mod4Mask, sendMessage, spawn)
 import XMonad.Core
   ( borderWidth,
@@ -9,6 +8,7 @@ import XMonad.Core
     manageHook,
     modMask,
     normalBorderColor,
+    startupHook,
     workspaces,
   )
 import XMonad.Hooks.EwmhDesktops (ewmh)
@@ -34,6 +34,7 @@ import XMonad.Layout
   )
 import XMonad.Layout.NoBorders (noBorders)
 import XMonad.Layout.Renamed (Rename (Replace), renamed)
+import XMonad.Main (xmonad)
 import XMonad.ManageHook
   ( className,
     composeAll,
@@ -42,6 +43,7 @@ import XMonad.ManageHook
     (=?),
   )
 import XMonad.Util.EZConfig (additionalKeysP)
+import XMonad.Util.SpawnOnce (spawnOnce)
 
 main =
   xmonad
@@ -66,7 +68,8 @@ myConfig =
       focusedBorderColor = "#2aa198",
       borderWidth = 2,
       layoutHook = myLayoutHook,
-      manageHook = myManageHook
+      manageHook = myManageHook,
+      startupHook = spawnOnce "pulseaudio --start"
     }
     `additionalKeysP` myKeys
 
