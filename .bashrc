@@ -18,6 +18,7 @@ export PASSWORD_STORE_DIR=$XDG_CONFIG_HOME/password-store
 
 alias mbsync='mbsync --config $XDG_CONFIG_HOME/mbsync/mbsyncrc'
 alias abook='abook --datafile $XDG_CONFIG_HOME/abook/addressbook'
+alias sc='sc-im'
 
 # Make applications aware of XMonad's non-reparenting property.
 export _JAVA_AWT_WM_NONREPARENTING=1
