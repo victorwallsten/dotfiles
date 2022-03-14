@@ -58,11 +58,11 @@ Checkout the files to the working tree:
 dotfiles checkout
 ```
 
-Done! If you wish, set up a remote repository and add your updates:
+Done! If you wish, set up a remote repository of your own and add your updates:
 
 ```bash
 dotfiles branch -M main
-dotfiles remote add origin <remote-url>
+dotfiles remote set-url origin <remote-url>
 
 dotfiles add <path/to/dotfile>
 dotfiles commit
