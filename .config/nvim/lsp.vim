@@ -48,13 +48,12 @@ for _, lsp in ipairs(servers) do
   }
 end
 
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-  vim.diagnostic.on_publish_diagnostics, {
-    virtual_text = false,
-    signs = false,
-    update_in_insert = false,
-    underline = true,
-  }
-)
+vim.diagnostic.config({
+  virtual_text = false,
+  signs = false,
+  update_in_insert = false,
+  underline = true
+})
+
 EOF
 
