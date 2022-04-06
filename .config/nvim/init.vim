@@ -26,9 +26,6 @@ let g:vimtex_view_general_viewer = 'zathura'
 
 let mapleader = ' '
 
-" insert new line, end in normal mode
-nnoremap <CR> O<Esc>
-
 " navigate between windows
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
